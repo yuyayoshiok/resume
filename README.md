@@ -66,7 +66,7 @@ AWSやGCPのサーバーレスインフラを Terraform でコード管理し、
 ### ai-audio — 音声入力デスクトップツール（実使用中）
 > ホットキー押下で録音→Whisper文字起こし→Gemini整形→クリップボードに流す
 
-- 吃音配慮のプロンプト設計。macOSのtray常駐アプリとして日常使用中
+- 吃音配慮のプロンプト設計。日常使用中
 - **技術**: Python / Groq Whisper / Gemini
 
 ---
