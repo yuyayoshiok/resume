@@ -69,7 +69,7 @@ AWSやGCPのサーバーレスインフラを Terraform でコード管理し、
 
 - 吃音配慮のプロンプト設計。日常使用中
 - **技術**: Python / Groq Whisper / Gemini
-
+- 参考：https://pody.jp/player/ngpcDWPy6otqtyr7XYmx/gdfr60bU6m6Jtpq2jyQv
 ---
 
 ## その他のプロジェクト（抜粋）
