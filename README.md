@@ -29,7 +29,7 @@ AWSやGCPのサーバーレスインフラを Terraform でコード管理し、
 - Slack / LINE をインターフェースとした通知・対話フロー
 
 ### 2. クラウド本番運用（GCP中心）
-個人プロダクトをGCPサーバーレスで本番運用。インフラをコードで管理し、障害対応の経験もあります。
+個人プロダクトをGCPサーバーレスで本番運用。
 - AWS: Lambda / S3 / CloudWatch / EventBridge
 - GCP: Cloud Run / Cloud Functions / Cloud Scheduler / Firestore / GCS / BigQuery
 - Cloudflare: Workers / R2 / D1 / AI Gateway
