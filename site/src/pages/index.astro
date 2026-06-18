@@ -123,15 +123,14 @@ const timeline = [
     </div>
     <div class="experience-years">
       <h3 class="skills-group__title" style="margin-top: 2rem;">経験年数</h3>
-      <div class="experience-grid">
-        <div class="experience-item"><span class="experience-label">業務自動化・社内DX</span><span class="experience-value">3年以上</span></div>
-        <div class="experience-item"><span class="experience-label">生成AI / LLM活用</span><span class="experience-value">3年程度</span></div>
-        <div class="experience-item"><span class="experience-label">Python</span><span class="experience-value">2年以上</span></div>
-        <div class="experience-item"><span class="experience-label">GAS / VBA</span><span class="experience-value">3年以上</span></div>
-        <div class="experience-item"><span class="experience-label">GCP / Cloudflare</span><span class="experience-value">1〜2年</span></div>
-        <div class="experience-item"><span class="experience-label">TypeScript / React</span><span class="experience-value">1年以上</span></div>
+      <div class="experience-list">
+        <span class="experience-chip">業務自動化・社内DX <strong>3年+</strong></span>
+        <span class="experience-chip">生成AI / LLM活用 <strong>3年</strong></span>
+        <span class="experience-chip">Python <strong>2年+</strong></span>
+        <span class="experience-chip">GAS / VBA <strong>3年+</strong></span>
+        <span class="experience-chip">GCP / Cloudflare <strong>1-2年</strong></span>
+        <span class="experience-chip">TypeScript / React <strong>1年+</strong></span>
       </div>
-      <p class="experience-note">※ 実務では業務自動化・生成AI活用、個人開発ではAIエージェント基盤・クラウド運用を中心に継続しています。</p>
     </div>
   </section>
 
@@ -505,41 +504,24 @@ const timeline = [
   }
 
   /* Experience years */
-  .experience-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.4rem;
-    max-width: 640px;
-  }
-
-  .experience-item {
+  .experience-list {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.55rem 0.85rem;
-    background: var(--gray-50);
-    border-radius: 8px;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .experience-chip {
     font-size: 0.85rem;
+    color: var(--gray-600);
+    padding: 0.4rem 0.85rem;
+    background: var(--gray-50);
+    border-radius: 100px;
   }
 
-  .experience-label {
-    color: var(--gray-700);
-    font-weight: 500;
-  }
-
-  .experience-value {
-    font-family: var(--font-mono);
-    font-weight: 500;
+  .experience-chip strong {
     color: var(--accent);
-    font-size: 0.8rem;
-    white-space: nowrap;
-  }
-
-  .experience-note {
-    font-size: 0.8rem;
-    color: var(--gray-400);
-    margin-top: 0.75rem;
-    max-width: 640px;
+    font-weight: 600;
+    margin-left: 0.3rem;
   }
 
   .skills-group__title {
@@ -627,10 +609,6 @@ const timeline = [
     }
 
     .about-work__grid {
-      grid-template-columns: 1fr;
-    }
-
-    .experience-grid {
       grid-template-columns: 1fr;
     }
   }
