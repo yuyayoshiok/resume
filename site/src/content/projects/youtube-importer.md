@@ -1,6 +1,6 @@
 ---
 title: "youtube-importer"
-emoji: "📺"
+emoji: ""
 order: 6
 desc: "登録チャンネルの新着動画を自動検知し、文字起こし＆AI要約してObsidian Vaultに保存。200本以上処理済み。"
 subtitle: "動画を「見る」前に要点が手に入る。知識ベースとして自動で育つ仕組み。"

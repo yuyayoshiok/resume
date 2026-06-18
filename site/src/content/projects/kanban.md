@@ -1,6 +1,6 @@
 ---
 title: "Kanban"
-emoji: "📋"
+emoji: ""
 order: 2
 desc: "Google Tasks同期のカンバンボード、複数AIの「ディベート機能」、支出管理、歩数ゲームなどを1つにまとめた総合ダッシュボード。"
 subtitle: "TypeScript 2万行超のフルスタックアプリ。毎日ここを開けば生活が回るコックピット。"

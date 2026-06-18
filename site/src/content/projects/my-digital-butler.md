@@ -1,6 +1,6 @@
 ---
 title: "MyDigitalButler"
-emoji: "🤖"
+emoji: ""
 order: 1
 desc: "20以上の機能を持つ個人用AIアシスタント。毎朝の挨拶、RSS要約、ブックマーク整理、健康データ同期などをSlack Bot経由で自律的に実行。"
 subtitle: "Google Cloud × Cloudflare で動く個人用AIシステム。複数のAIを束ねて毎日自動で動き続ける。"

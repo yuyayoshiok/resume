@@ -1,6 +1,6 @@
 ---
 title: "x-bookmark-enricher"
-emoji: "🔖"
+emoji: ""
 order: 7
 desc: "X(Twitter)のブックマークをAIで要約・タグ付け・スコアリングし、Obsidian Vaultにインポート。あとで読むを知識ベースに変換。"
 subtitle: "ブックマークを「使える知識」に変えてObsidian Vaultへ取り込む自動パイプライン。"

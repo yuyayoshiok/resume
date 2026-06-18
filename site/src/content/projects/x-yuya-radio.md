@@ -1,6 +1,6 @@
 ---
 title: "x-yuya Radio"
-emoji: "🎙️"
+emoji: ""
 order: 4
 desc: "Obsidian Vaultの思考ログを素材に、AIが台本を書き、音声合成エンジンが2人の話者で読み上げる全自動ポッドキャスト生成システム。"
 subtitle: "BGM（トレンド型）と価値観ラヂオ（内省型）の2チャンネルを毎日自動配信。"
