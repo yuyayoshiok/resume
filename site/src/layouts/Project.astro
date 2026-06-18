@@ -1,0 +1,239 @@
+---
+import Base from './Base.astro';
+
+interface Props {
+  title: string;
+  emoji: string;
+  subtitle: string;
+  tags: string[];
+}
+
+const { title, emoji, subtitle, tags } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+
+<Base title={`${title} — Y.Yuya`}>
+  <nav class="project-nav">
+    <a href={`${base}/`} class="project-nav__back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Back
+    </a>
+  </nav>
+
+  <article class="project-page">
+    <header class="project-page__header fade-in">
+      <h1 class="project-page__title">{title}</h1>
+      <p class="project-page__subtitle">{subtitle}</p>
+      <div class="project-page__tags">
+        {tags.map((t) => <span class="modal__tag">{t}</span>)}
+      </div>
+    </header>
+
+    <div class="project-page__body fade-in">
+      <slot />
+    </div>
+  </article>
+
+  <footer class="footer">
+    <a href={`${base}/`}>&larr; Back to portfolio</a>
+  </footer>
+
+</Base>
+
+<style>
+  .project-nav {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+  }
+
+  .project-nav__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--gray-500);
+    padding: 0.4rem 0.8rem;
+    border: 1px solid var(--gray-200);
+    border-radius: 100px;
+    transition: all 0.25s var(--ease);
+  }
+
+  .project-nav__back:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--accent-bg);
+  }
+
+  .project-page {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 2rem 4rem;
+  }
+
+  .project-page__header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--gray-100);
+  }
+
+  .project-page__emoji {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .project-page__title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--gray-900);
+    letter-spacing: -0.03em;
+  }
+
+  .project-page__subtitle {
+    margin-top: 0.75rem;
+    font-size: 1.05rem;
+    color: var(--gray-500);
+    line-height: 1.7;
+  }
+
+  .project-page__tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem;
+    margin-top: 1.25rem;
+  }
+
+  .project-page__body {
+    font-size: 0.95rem;
+    color: var(--gray-700);
+    line-height: 1.9;
+  }
+
+  .project-page__body :global(h1) {
+    display: none;
+  }
+
+  .project-page__body :global(h2) {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin: 2.5rem 0 0.75rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid var(--accent-bg);
+  }
+
+  .project-page__body :global(h3) {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--gray-800);
+    margin: 1.5rem 0 0.5rem;
+  }
+
+  .project-page__body :global(p) {
+    margin-bottom: 1rem;
+  }
+
+  .project-page__body :global(ul) {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+
+  .project-page__body :global(li) {
+    padding-left: 1.4rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+  }
+
+  .project-page__body :global(li::before) {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.65em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    opacity: 0.5;
+  }
+
+  .project-page__body :global(strong) {
+    color: var(--gray-800);
+    font-weight: 600;
+  }
+
+  .project-page__body :global(code) {
+    font-family: var(--font-mono);
+    font-size: 0.85em;
+    background: var(--gray-50);
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+    color: var(--accent);
+  }
+
+  .project-page__body :global(pre) {
+    background: #f8fafc !important;
+    border: 1px solid var(--gray-100);
+    border-radius: 8px;
+    padding: 1.25rem;
+    overflow-x: auto;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    line-height: 1.6;
+    margin: 1rem 0;
+    color: var(--gray-700) !important;
+  }
+
+  .project-page__body :global(pre code) {
+    background: none !important;
+    padding: 0;
+    color: var(--gray-700) !important;
+  }
+
+  .project-page__body :global(pre span) {
+    color: inherit !important;
+  }
+
+  .project-page__body :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.85rem;
+  }
+
+  .project-page__body :global(th),
+  .project-page__body :global(td) {
+    padding: 0.6rem 0.8rem;
+    border-bottom: 1px solid var(--gray-100);
+    text-align: left;
+  }
+
+  .project-page__body :global(th) {
+    font-weight: 600;
+    color: var(--gray-800);
+    background: var(--gray-50);
+  }
+
+  .project-page__body :global(blockquote) {
+    border-left: 3px solid var(--accent);
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    background: var(--accent-bg);
+    border-radius: 0 8px 8px 0;
+    color: var(--gray-600);
+  }
+
+  @media (max-width: 640px) {
+    .project-page {
+      padding: 0 1.5rem 3rem;
+    }
+
+    .project-page__title {
+      font-size: 1.6rem;
+    }
+  }
+</style>

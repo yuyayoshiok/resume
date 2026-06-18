@@ -1,0 +1,563 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const allProjects = await getCollection('projects');
+const projects = allProjects
+  .filter((p) => p.data.order >= 1)
+  .sort((a, b) => a.data.order - b.data.order);
+
+const base = import.meta.env.BASE_URL;
+
+const skills = [
+  { category: 'Languages', items: ['Python', 'Go', 'TypeScript', 'JavaScript', 'VBA', 'GAS'] },
+  { category: 'Backend', items: ['FastAPI', 'Hono', 'Express'] },
+  { category: 'Frontend', items: ['React', 'Next.js', 'Astro', 'Vite'] },
+  { category: 'Cloud', items: ['GCP', 'Cloudflare Workers', 'Vercel'] },
+  { category: 'AI / LLM', items: ['Gemini', 'Groq', 'Claude Code', 'RAG', 'Whisper'] },
+  { category: 'Infra / CI', items: ['Terraform', 'Docker', 'GitHub Actions'] },
+  { category: 'Data / Tools', items: ['SQLite', 'Slack Bot'] },
+];
+
+const timeline = [
+  { year: '2015', label: 'データ入力オペレーター', desc: 'デスクワークで自分の適性に気づく。手を動かす仕事が合っていた' },
+  { year: '2022', label: 'VBAとの出会い', desc: '派遣のSE補佐でAccess・VBAに出会う。2時間かかっていた作業を3分に短縮し、「自分が作ったもので現場が楽になる」喜びを知った' },
+  { year: '2023', label: 'ChatGPTが転機に', desc: '吃音があり電話業務が壁だったが、テキストベースのAIが「通信の壁」を超える手段になった。ここからエンジニアとしてのキャリアが始まる' },
+  { year: '2024', label: 'GAS → Python → GCP', desc: 'VBAの基礎知識とAIの力を掛け合わせ、GAS・Python・Google Cloud・GitHub Actionsへ一気に学習範囲を拡大' },
+  { year: '2025', label: 'AI System Builder', desc: '個人用AIアシスタント「MyDigitalButler」を設計・運用。20以上の機能をサーバーレスで自律的に動かす日々' },
+];
+---
+
+<Base>
+  <!-- Hero -->
+  <section class="hero">
+    <p class="hero__greeting fade-in">ポートフォリオ</p>
+    <h1 class="hero__name fade-in">Y.Yuya</h1>
+    <p class="hero__bio fade-in">
+      Python / Go / TypeScript でバックエンド〜インフラを一貫して担当。<br />
+      LLM統合・業務自動化が得意なエンジニアです。
+    </p>
+    <div class="hero__links fade-in">
+      <a class="hero__link" href="https://github.com/yuyayoshiok" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        GitHub
+      </a>
+      <a class="hero__link" href="https://x.com/yuyaainocode" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        X
+      </a>
+      <a class="hero__link" href="https://note.com/yuyaainocode" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 4.5v15a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 19.5v-15A2.5 2.5 0 0 1 4.5 2h15A2.5 2.5 0 0 1 22 4.5zM7 7.5a1 1 0 1 0-2 0 1 1 0 0 0 2 0zM19 7H9v2h10V7zm0 4H5v2h14v-2zm0 4H5v2h14v-2z"/></svg>
+        note
+      </a>
+    </div>
+    <div class="hero__scroll">
+      <span>scroll</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </div>
+  </section>
+
+  <!-- Story Timeline -->
+  <section class="section section--alt fade-in">
+    <div class="section__header">
+      <span class="section__number">01</span>
+      <span class="section__title">ストーリー</span>
+      <span class="section__line"></span>
+    </div>
+    <div class="story__body">
+      <p>
+        もともとデータ入力の仕事をしていました。<br />
+        <strong>吃音</strong>があり、電話や口頭でのやりとりが大きな壁でした。<br />
+        接客や電話対応のある仕事では最初の一言が出ず、何度も転職を経験しました。
+      </p>
+      <p>
+        転機のきっかけは、派遣のSE補佐として Access や VBA に出会ったこと。<br />
+        手作業で2時間かかっていた作業を3分に短縮するツールを作り、<br />
+        <strong>「自分が作ったもので現場が楽になる」喜び</strong>を知りました。<br />
+        テキストで完結するデスクワークなら自分の力を存分に出せる——<br />
+        そう気づいた瞬間でした。
+      </p>
+      <p>
+        2023年、<span class="story__highlight">ChatGPTとの出会いが人生を変えました</span>。<br />
+        テキストベースのAIが、吃音という「通信の壁」を超えてくれる手段になった。<br />
+        何度質問しても否定されない。<br />
+        自分のペースで話せる。<br />
+        AIは単なるツールではなく、<strong>生活と仕事を成立させてくれた存在</strong>でした。
+      </p>
+      <p>
+        そこからVBAの知識を土台に、GAS・Python・Google Cloud・Cloudflareへと学習範囲を広げ、エンジニアに転身。<br />
+        現在は「自分の生活をAIで自動化する」をテーマに、個人用AIシステムの設計・開発・運用をしています。<br />
+        得意なのは、<strong>非エンジニアの現場にある「めんどくさい手作業」を見つけて、技術で楽にすること</strong>。
+      </p>
+    </div>
+    <div class="timeline">
+      {timeline.map((t, i) => (
+        <div class="timeline__item fade-in" style={`transition-delay: ${i * 0.1}s`}>
+          <div class="timeline__dot"></div>
+          <div class="timeline__year">{t.year}</div>
+          <div class="timeline__content">
+            <span class="timeline__label">{t.label}</span>
+            <span class="timeline__desc">{t.desc}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section fade-in">
+    <div class="section__header">
+      <span class="section__number">02</span>
+      <span class="section__title">スキル</span>
+      <span class="section__line"></span>
+    </div>
+    <div class="skills-grid">
+      {skills.map((group) => (
+        <div class="skills-group">
+          <h3 class="skills-group__title">{group.category}</h3>
+          <div class="skills">
+            {group.items.map((s) => <span class="skill-tag">{s}</span>)}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Work Experience -->
+  <section class="section section--alt fade-in">
+    <div class="section__header">
+      <span class="section__number">03</span>
+      <span class="section__title">仕事での実績</span>
+      <span class="section__line"></span>
+    </div>
+    <p class="work__intro">BPO企業にて、社内の自動化・AI活用支援を担当。非エンジニアの現場にある手作業をツールで改善しています。</p>
+    <div class="work-grid">
+      <a class="work-card work-card--featured work-card--link" href={`${base}/projects/voc-analyzer/`}>
+        <div class="work-card__badge">Featured</div>
+        <h3 class="work-card__title">VoC自動分析ツール</h3>
+        <p class="work-card__tech">VBA + Azure OpenAI</p>
+        <p class="work-card__desc">
+          電話・チャットの応対ログ（月間15-20万件）から、顧客の声を生成AIで自動分析。
+          個人情報の自動匿名化 → AI分析（要約・分類・VoC判定）→ 集計まで一貫処理。
+          8-9台のPCで並列分散処理し、ロックファイル方式で排他制御。
+        </p>
+        <ul class="work-card__results">
+          <li><strong>約200人月 → 1-2名運用</strong>に圧縮</li>
+          <li>業務フロー全体の約70%を自動化</li>
+          <li>16項目の多面的抽出で品質を均一化</li>
+        </ul>
+        <span class="project-card__cta">View details &rarr;</span>
+      </a>
+      <div class="work-card">
+        <h3 class="work-card__title">社内申請ツール</h3>
+        <p class="work-card__tech">Python (Flask) + Chatwork API</p>
+        <p class="work-card__desc">申請→承認のフローを可視化。承認プロセスの所要時間を約50%短縮、申請漏れをほぼゼロに。</p>
+      </div>
+      <div class="work-card">
+        <h3 class="work-card__title">シフト表自動作成ツール</h3>
+        <p class="work-card__tech">Google Apps Script</p>
+        <p class="work-card__desc">スタッフの希望条件から自動生成。シフト作成時間を月2時間 → 10分に短縮。</p>
+      </div>
+      <div class="work-card">
+        <h3 class="work-card__title">メール一括送信ツール</h3>
+        <p class="work-card__tech">Google Apps Script</p>
+        <p class="work-card__desc">テンプレート差し込み＋送信ログ自動記録。送信作業を1時間 → 5分に短縮、ミスもほぼゼロに。</p>
+      </div>
+      <div class="work-card">
+        <h3 class="work-card__title">工数管理チェックツール</h3>
+        <p class="work-card__tech">Google Apps Script</p>
+        <p class="work-card__desc">作業ログの入力漏れ・異常値を自動検出。検出率95%以上、チェック時間を1/5に削減。</p>
+      </div>
+      <div class="work-card">
+        <h3 class="work-card__title">コンディションチェックツール</h3>
+        <p class="work-card__tech">Google Forms + GAS</p>
+        <p class="work-card__desc">従業員の日々の体調をフォームで収集し、シフト表と連動して未提出者を自動抽出。回答率90%以上を維持。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects (Personal) -->
+  <section class="section fade-in">
+    <div class="section__header">
+      <span class="section__number">04</span>
+      <span class="section__title">個人開発プロジェクト</span>
+      <span class="section__line"></span>
+    </div>
+    <div class="projects-grid">
+      {projects.map((p, i) => (
+        <a class={`project-card ${i === 0 ? 'project-card--hero' : ''}`} href={`${base}/projects/${p.id}/`}>
+          <h3 class="project-card__title">{p.data.title}</h3>
+          <p class="project-card__desc">{p.data.desc}</p>
+          <div class="project-card__tags">
+            {p.data.tags.map((t: string) => <span class="project-card__tag">{t}</span>)}
+          </div>
+          <span class="project-card__cta">View details &rarr;</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- About Work -->
+  <section class="section section--alt fade-in">
+    <div class="section__header">
+      <span class="section__number">05</span>
+      <span class="section__title">お仕事について</span>
+      <span class="section__line"></span>
+    </div>
+    <div class="about-work">
+      <div class="about-work__grid">
+        <div class="about-work__item">
+          <h3 class="about-work__label">得意領域</h3>
+          <p>バックエンド開発（Python / Go / TypeScript）、<br />LLM・生成AI統合、業務自動化（VBA / GAS）</p>
+        </div>
+        <div class="about-work__item">
+          <h3 class="about-work__label">働き方</h3>
+          <p>フルリモート・フルフレックス希望。<br />Claude Code 等の生成AIツールを活用した開発スタイルです。</p>
+        </div>
+        <div class="about-work__item">
+          <h3 class="about-work__label">関心のある案件</h3>
+          <p>AI / LLM を活用したプロダクト開発、<br />社内業務の自動化・効率化</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer fade-in">
+    <p>&copy; 2025 Y.Yuya</p>
+  </footer>
+
+</Base>
+
+<style>
+  /* Story body */
+  .story__body {
+    max-width: 840px;
+    margin-bottom: 3rem;
+  }
+
+  .story__body p {
+    font-size: 1.05rem;
+    color: var(--gray-600);
+    line-height: 2;
+    margin-bottom: 1.25rem;
+  }
+
+  .story__body strong {
+    color: var(--gray-800);
+    font-weight: 600;
+  }
+
+  .story__highlight {
+    background: linear-gradient(transparent 60%, var(--accent-bg) 60%);
+  }
+
+  /* Work section */
+  .work__intro {
+    font-size: 0.95rem;
+    color: var(--gray-500);
+    margin-bottom: 1.5rem;
+  }
+
+  .work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+
+  .work-card {
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    padding: 1.25rem;
+    background: var(--white);
+    transition: all 0.25s var(--ease);
+  }
+
+  .work-card:hover {
+    border-color: var(--gray-300);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  }
+
+  .work-card--featured {
+    grid-column: 1 / -1;
+    border-color: var(--accent-border);
+    background: var(--white);
+    position: relative;
+  }
+
+  .work-card--link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .work-card--link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), #7c3aed);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s var(--ease);
+  }
+
+  .work-card--link:hover {
+    border-color: var(--gray-200);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+    transform: translateY(-4px);
+  }
+
+  .work-card--link:hover::before {
+    transform: scaleX(1);
+  }
+
+  .work-card--link:hover .project-card__cta {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .work-card__badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    background: var(--accent-bg);
+    padding: 0.2rem 0.6rem;
+    border-radius: 100px;
+    margin-bottom: 0.5rem;
+  }
+
+  .work-card__title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 0.25rem;
+  }
+
+  .work-card__tech {
+    font-size: 0.8rem;
+    font-family: var(--font-mono);
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+
+  .work-card__desc {
+    font-size: 0.85rem;
+    color: var(--gray-600);
+    line-height: 1.7;
+  }
+
+  .work-card__results {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .work-card__results li {
+    font-size: 0.8rem;
+    color: var(--gray-700);
+    background: var(--accent-bg);
+    padding: 0.3rem 0.7rem;
+    border-radius: 6px;
+  }
+
+  .work-card__results li strong {
+    color: var(--accent);
+  }
+
+  .work-card__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--accent);
+    margin-top: 0.75rem;
+    transition: gap 0.2s var(--ease);
+  }
+
+  .work-card__cta:hover {
+    gap: 0.6rem;
+  }
+
+  /* Timeline */
+  .timeline {
+    position: relative;
+    padding-left: 2rem;
+    max-width: 840px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 4px;
+    bottom: 4px;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--accent), var(--gray-200));
+    border-radius: 2px;
+  }
+
+  .timeline__item {
+    position: relative;
+    padding-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 0.75rem;
+    align-items: start;
+  }
+
+  .timeline__item:last-child {
+    padding-bottom: 0;
+  }
+
+  .timeline__dot {
+    position: absolute;
+    left: -2rem;
+    top: 4px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--white);
+    border: 3px solid var(--accent);
+    z-index: 1;
+    transition: transform 0.3s var(--ease);
+  }
+
+  .timeline__item:hover .timeline__dot {
+    transform: scale(1.3);
+    background: var(--accent);
+  }
+
+  .timeline__year {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--accent);
+    padding-top: 1px;
+  }
+
+  .timeline__content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .timeline__label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--gray-800);
+  }
+
+  .timeline__desc {
+    font-size: 0.85rem;
+    color: var(--gray-500);
+  }
+
+  /* Skills grid */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .skills-group__title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--gray-400);
+    margin-bottom: 0.6rem;
+  }
+
+  /* Project card as link */
+  .project-card {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  /* About Work */
+  .about-work {
+    max-width: 840px;
+  }
+
+  .about-work__status {
+    font-size: 1.1rem;
+    color: var(--gray-700);
+    margin-bottom: 2rem;
+  }
+
+  .about-work__status strong {
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .about-work__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .about-work__item {
+    padding: 1.25rem;
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    background: var(--white);
+  }
+
+  .about-work__label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+
+  .about-work__item p {
+    font-size: 0.85rem;
+    color: var(--gray-600);
+    line-height: 1.7;
+  }
+
+  .about-work__contact {
+    font-size: 0.9rem;
+    color: var(--gray-500);
+  }
+
+  @media (max-width: 768px) {
+    .story__body {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .skills-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .timeline {
+      padding-left: 1.5rem;
+    }
+
+    .work-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .about-work__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
