@@ -507,22 +507,24 @@ const timeline = [
   /* Experience years */
   .experience-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.4rem;
+    max-width: 640px;
   }
 
   .experience-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 0.75rem;
-    border: 1px solid var(--gray-100);
+    padding: 0.55rem 0.85rem;
+    background: var(--gray-50);
     border-radius: 8px;
     font-size: 0.85rem;
   }
 
   .experience-label {
-    color: var(--gray-600);
+    color: var(--gray-700);
+    font-weight: 500;
   }
 
   .experience-value {
@@ -530,12 +532,14 @@ const timeline = [
     font-weight: 500;
     color: var(--accent);
     font-size: 0.8rem;
+    white-space: nowrap;
   }
 
   .experience-note {
     font-size: 0.8rem;
     color: var(--gray-400);
     margin-top: 0.75rem;
+    max-width: 640px;
   }
 
   .skills-group__title {
