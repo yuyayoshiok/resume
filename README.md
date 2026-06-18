@@ -92,7 +92,7 @@ AWSやGCPのサーバーレスインフラを Terraform でコード管理し、
 
 | カテゴリ | 技術 |
 |---|---|
-| **言語** | Python ★★★ / Go ★★ / TypeScript ★ |
+| **言語** | Python / Go / TypeScript |
 | **AI / LLM** | Claude / Gemini / Groq / Whisper |
 | **クラウド** | AWS / GCP / Cloudflare |
 | **IaC / CI** | Terraform / GitHub Actions / Docker |
@@ -121,6 +121,7 @@ AWSやGCPのサーバーレスインフラを Terraform でコード管理し、
 **社内自動化・AI化支援エンジニア**
 
 BPO企業での短時間勤務と並行して、個人事業主（屋号：J-AI）としてのフリーランス活動を開始。会社員として社内AI化を推進しながら、業務委託先でも開発実績を積む。
+
 2025年10月からは業務委託先を終了し、会社員としてフルコミット。VoC分析ツールの開発などを行った。
 
 **BPO企業での実績（社内向け）**
