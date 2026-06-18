@@ -121,6 +121,18 @@ const timeline = [
         </div>
       ))}
     </div>
+    <div class="experience-years">
+      <h3 class="skills-group__title" style="margin-top: 2rem;">経験年数</h3>
+      <div class="experience-grid">
+        <div class="experience-item"><span class="experience-label">業務自動化・社内DX</span><span class="experience-value">3年以上</span></div>
+        <div class="experience-item"><span class="experience-label">生成AI / LLM活用</span><span class="experience-value">3年程度</span></div>
+        <div class="experience-item"><span class="experience-label">Python</span><span class="experience-value">2年以上</span></div>
+        <div class="experience-item"><span class="experience-label">GAS / VBA</span><span class="experience-value">3年以上</span></div>
+        <div class="experience-item"><span class="experience-label">GCP / Cloudflare</span><span class="experience-value">1〜2年</span></div>
+        <div class="experience-item"><span class="experience-label">TypeScript / React</span><span class="experience-value">1年以上</span></div>
+      </div>
+      <p class="experience-note">※ 実務では業務自動化・生成AI活用、個人開発ではAIエージェント基盤・クラウド運用を中心に継続しています。</p>
+    </div>
   </section>
 
   <!-- Work Experience -->
@@ -492,6 +504,40 @@ const timeline = [
     gap: 1.5rem;
   }
 
+  /* Experience years */
+  .experience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+
+  .experience-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--gray-100);
+    border-radius: 8px;
+    font-size: 0.85rem;
+  }
+
+  .experience-label {
+    color: var(--gray-600);
+  }
+
+  .experience-value {
+    font-family: var(--font-mono);
+    font-weight: 500;
+    color: var(--accent);
+    font-size: 0.8rem;
+  }
+
+  .experience-note {
+    font-size: 0.8rem;
+    color: var(--gray-400);
+    margin-top: 0.75rem;
+  }
+
   .skills-group__title {
     font-size: 0.75rem;
     font-weight: 600;
@@ -577,6 +623,10 @@ const timeline = [
     }
 
     .about-work__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .experience-grid {
       grid-template-columns: 1fr;
     }
   }
