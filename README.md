@@ -1,6 +1,6 @@
 # Y.Yuya
 
-**AIエージェントを実務で運用設計できるフルスタックエンジニア**
+**LLM統合・業務自動化が得意なPythonバックエンドエンジニア**
 
 > ポートフォリオサイト: [yuyayoshiok.github.io/resume](https://yuyayoshiok.github.io/resume/)
 
