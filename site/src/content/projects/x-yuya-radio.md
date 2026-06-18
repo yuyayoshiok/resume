@@ -11,7 +11,6 @@ tags: ["Python", "Codex", "AivisSpeech", "Cloudflare R2", "GitHub Actions"]
 
 > Obsidian Vault を素材に、LLMが台本を書き、AivisSpeechが2人の話者で読み上げ、Cloudflare R2に配信する——**完全自動のポッドキャスト生成システム**。x-yuya の中核機能であるラジオ部分にフォーカスした記録。
 
-- **リポジトリ**: `x-yuya`（本ドキュメントは「ラジオ」機能に限定）
 
 ---
 

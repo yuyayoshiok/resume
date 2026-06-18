@@ -11,7 +11,6 @@ tags: ["Python", "Groq Whisper", "Gemini", "customtkinter", "pynput"]
 
 > ホットキーひとつでマイク録音し、Groq Whisper で文字起こし、Gemini で整形してクリップボードへ——「話してドラフトを作る」ワークフローを実現する個人向けデスクトップアプリ。**吃音フレンドリー**な設計が特徴。
 
-- **リポジトリ**: `ai-audio`
 - **バージョン**: 0.1.0
 - **対応OS**: macOS / Windows
 

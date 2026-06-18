@@ -11,7 +11,6 @@ tags: ["Go", "Python", "TypeScript", "GCP", "Cloudflare Workers", "Terraform", "
 
 > Google Cloud × Cloudflare で動く、生活・学習・健康・業務を能動的にサポートする個人用AIシステム。Obsidian（メモ帳アプリ）と深く統合し、複数のAIを束ねて毎日自動で動き続ける。
 
-- **リポジトリ**: `MyDigitalButler_GCP`
 - **稼働状況**: 2025年11月〜／本番稼働中
 - **主インターフェース**: Slack Bot
 
