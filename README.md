@@ -20,7 +20,7 @@ AWSやGCPのサーバーレスインフラを Terraform でコード管理し、
 | | |
 |---|---|
 | 居住地 | 島根県|
-| 稼働 | 週5日 |
+| 稼働 | 週3~5日 |
 | GitHub | [github.com/yuyayoshiok](https://github.com/yuyayoshiok) |
 
 ---
