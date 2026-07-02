@@ -4,5 +4,9 @@
 # Allow README.md
 !README.md
 
+# Allow projects directory
+!projects/
+!projects/**
+
 # Allow .gitignore itself
 !.gitignore
