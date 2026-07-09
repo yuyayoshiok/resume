@@ -85,6 +85,7 @@ BPO企業で月20万件のVoCデータをAzure OpenAIで自動分析する仕組
 
 | プロジェクト | 概要 | 技術 |
 |---|---|---|
+| [Gorisan（ゴリさん）](projects/gorisan.md) | 関西弁AIトレーナーLINE Bot。食事写真解析・歩数自動集計・相互応援で運動継続を支援 | Go / Gemini / Cloud Run / LINE |
 | [x-yuya Radio](projects/x-yuya-radio.md) | Codex/AivisSpeechが毎朝ラジオ音声を自動生成 | Codex / AivisSpeech / Cloudflare |
 | [Kanban](projects/kanban.md) | Google Tasks連携・LLMチャット搭載の自分専用ダッシュボード | React / TypeScript / Cloudflare |
 | [youtube-importer](projects/youtube-importer.md) | YouTubeを監視し新着を文字起こし→要約→Obsidianへ自動保存 | Python / GitHub Actions / Groq Whisper |

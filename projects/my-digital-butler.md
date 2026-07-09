@@ -13,8 +13,8 @@
 
 設計の軸は3つ:
 
-1. **機能ごとに独立したサーバーレス構成** — 各機能を小さな独立サービスに分割し、Go（定期ジョブ）とPython（AI・画像解析）を適材適所で使い分け
-2. **複数AIの統一窓口** — Groq / Cerebras / Gemini を束ね、1つが止まっても別のAIへ自動で切り替えてサービスを止めない
+1. **機能ごとに独立したサーバーレス構成** — サーバー管理不要のクラウド上で、各機能を小さな独立サービスに分割。Go（定期ジョブ）とPython（AI・画像解析）を適材適所で使い分け
+2. **複数AIの統一窓口** — Groq / Gemini を束ね、1つが止まっても別のAIへ自動で切り替えてサービスを止めない
 3. **Obsidianメモ帳との循環** — Obsidian ⇄ GitHub ⇄ クラウドストレージ ⇄ データベースの多層同期で、生活ログと知識を永続化・再利用
 
 ---
@@ -47,9 +47,9 @@
 
 ## 技術スタック
 
-**コンピュート**
-- Cloud Run（Go 1.21+ / Python 3.11+）
-- Cloudflare Workers（TypeScript）← GCPから段階的に移行中
+**コンピュート（プログラムの実行環境）**
+- Cloud Run（Googleの、サーバー管理不要でプログラムを動かせるサービス。Go / Python）
+- Cloudflare Workers（ユーザーの近くで動く軽量な実行環境。TypeScript）← GCPから段階的に移行中
 
 **LLM / AI**
 - Groq `llama-3.1-8b-instant`（メイン・高速・無料枠大）
@@ -57,14 +57,14 @@
 - Gemini `3.1-flash-lite` / `pro`（RSS要約・RAG・画像解析）
 - Cloudflare AI Gateway（複数AIをまとめる窓口）で、1つが止まっても別AIへ自動切替
 
-**ストレージ**
-- Cloud Storage（Obsidian Markdown / 画像 / ログ）
-- Firestore（チャット履歴・既読管理・セッション）→ Cloudflare D1（SQLite）へ移行検証中
-- BigQuery（GCP課金データ）
-- Cloudflare R2（オブジェクトストレージ・移行先）
+**ストレージ（データの保管場所）**
+- Cloud Storage（ファイルの保管庫。Obsidian Markdown / 画像 / ログ）
+- Firestore（データベース。チャット履歴・既読管理・セッション）→ Cloudflare D1（SQLite）へ移行検証中
+- BigQuery（大量データの集計用データベース。クラウド課金データの分析）
+- Cloudflare R2（ファイルの保管庫・移行先）
 
-**IaC / 運用**
-- Terraform（Cloud Run / GCS / Firestore / IAM をコード管理）
+**IaC / 運用（インフラの構成管理）**
+- Terraform（クラウドの構成を手作業ではなくコードで管理する道具。再現・復旧が容易に）
 - GitHub Actions（定期実行・CI/CD）
 - Wrangler（Cloudflare デプロイ）
 
@@ -76,7 +76,7 @@
 
 ```
 functions/                 GCP Cloud Run マイクロサービス群
-├── slack_event_handler/   [Python] メインSlack Bot・RAG
+├── slack_event_handler/   [Python] メインSlack Bot・RAG（メモを検索してから答えるAI）
 ├── daily_checkin_go/      [Go] 朝の挨拶（カレンダー統合）
 ├── daily_reflection_go/   [Go] 日次振り返り（Slack→Markdown→GitHub）
 ├── process_rss_go/        [Go] RSS処理
