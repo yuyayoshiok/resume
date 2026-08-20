@@ -9,7 +9,7 @@ tags:
   - "TypeScript"
   - "Vite"
   - "Node.js"
-  - "Vercel"
+  - "Cloudflare"
   - "Gemini"
   - "Grok"
   - "GLM"
