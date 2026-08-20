@@ -145,6 +145,11 @@ export const articles = [
     href: "https://note.com/yuyaainocode/n/ne73991194c0d",
     site: "note",
   },
+  {
+    title: "Obsidianにハマって、生活のほとんど全てのデータを分析している話",
+    href: "https://note.com/yuyaainocode/n/n5f64dfe86336",
+    site: "note",
+  },
 ] as const;
 
 export const aboutItems = [

@@ -60,6 +60,10 @@ tags:
 - **季節の演出**: 桜・新緑・紅葉・雪のアニメーション
 - **朝のあいさつ**: 毎朝7〜9時にモチベーションメッセージを表示
 
+![ラジオ再生機能](https://raw.githubusercontent.com/yuyayoshiok/resume/main/screenshots/radio-player.webp)
+
+*x-yuya Radio で自動生成したポッドキャストを、このアプリ内のプレイヤーで再生する*
+
 ---
 
 ## 技術スタック

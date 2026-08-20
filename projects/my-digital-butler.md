@@ -56,6 +56,10 @@ tags:
 
 - **ナレッジグラフ生成**: Obsidianのノートを分析してタグとサマリーを新たに自動付与
 - **ブックマーク整理**: Xのブックマークを要約・分類し、カテゴリ別のインデックスを自動生成
+![Slackでの対話](https://raw.githubusercontent.com/yuyayoshiok/resume/main/screenshots/butler-slack.webp)
+
+*Slackから話しかけると、その日の記録を整理して返す。用途に応じてモードが切り替わる*
+
 ### ヘルスケア・運用
 
 - Apple Watch / Oura Ring のデータ同期（歩数・睡眠・心拍）

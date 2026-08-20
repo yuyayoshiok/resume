@@ -12,6 +12,9 @@
 # Screenshots referenced from the write-ups
 !screenshots/**/*.webp
 
+# Example output shown in the write-ups
+!samples/**/*.md
+
 # Portfolio site source (site/dist is built by CI, not committed)
 !site/src/**
 !site/public/**
