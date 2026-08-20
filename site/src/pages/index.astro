@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
+import ProjectIcon from "../components/ProjectIcon.astro";
 import {
   profile,
   story,
@@ -138,7 +139,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
       {
         projects.map((project) => (
           <a class="project-card" href={`${base}/projects/${project.id}/`}>
-            <span class="project-card__emoji">{project.data.emoji}</span>
+            <ProjectIcon name={project.data.icon} />
             <h3 class="project-card__title">{project.data.title}</h3>
             <p class="project-card__desc">{project.data.desc}</p>
             <div class="project-card__tags">

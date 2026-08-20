@@ -216,3 +216,37 @@
     padding-right: 1.25rem;
   }
 }
+
+/* ------------------------------------------------------------------ *
+ * Story section — readable measure, left aligned
+ * ------------------------------------------------------------------ */
+
+.story {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
+}
+
+.story__text {
+  margin-bottom: 1.4rem;
+}
+
+.story__text:last-child {
+  margin-bottom: 0;
+}
+
+/* ------------------------------------------------------------------ *
+ * Project card icon (replaces the emoji)
+ * ------------------------------------------------------------------ */
+
+.project-card__icon {
+  width: 26px;
+  height: 26px;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.project-card:hover .project-card__icon {
+  color: var(--accent-light);
+}
