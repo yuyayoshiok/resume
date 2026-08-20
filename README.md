@@ -55,6 +55,8 @@ UIからバックエンド、デプロイまで領域を分けずに担当し、
 
 > タスク管理と情報収集を1画面に集約した、自分専用のプロダクト
 
+![Kanbanのタスク管理画面](https://raw.githubusercontent.com/yuyayoshiok/resume/main/screenshots/kanban-board.webp)
+
 - Google Tasks API との双方向同期、ドラッグ&ドロップのカンバンUI、GitHub Issues 連携を実装
 - **複数のLLMへ同じ問いを並列で投げ、回答の良い部分をマージして最適解を作る「ディベートモード」** のAIチャットを実装
 - フロントエンドからサーバーレス関数、デプロイまで一人で担当。日常的に使いながら改善中
