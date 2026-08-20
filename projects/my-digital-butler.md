@@ -1,3 +1,20 @@
+---
+title: "MyDigitalButler"
+emoji: "🤖"
+order: 2
+subtitle: "個人AIアシスタント基盤"
+desc: "20以上の機能を持つ個人用AIアシスタント。毎朝の挨拶、RSS要約、ブックマーク整理、健康データ同期などをSlack Bot経由で自律的に実行。"
+tags:
+  - "Go"
+  - "Python"
+  - "TypeScript"
+  - "GCP"
+  - "Cloudflare Workers"
+  - "Terraform"
+  - "Gemini"
+  - "Groq"
+---
+
 # MyDigitalButler — 個人用AIアシスタント / デジタル執事システム
 
 > Google Cloud × Cloudflare で動く、生活・学習・健康・業務を能動的にサポートする個人用AIシステム。Obsidian（メモ帳アプリ）と深く統合し、複数のAIを束ねて毎日自動で動き続ける。

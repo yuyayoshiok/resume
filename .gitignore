@@ -1,12 +1,28 @@
-# Ignore everything
+# Default: ignore everything, then allow-list what belongs in the repo.
 *
+!*/
 
-# Allow README.md
+# Resume itself
 !README.md
-
-# Allow projects directory
-!projects/
-!projects/**
-
-# Allow .gitignore itself
 !.gitignore
+
+# Project write-ups (rendered on GitHub and by the portfolio site)
+!projects/**/*.md
+
+# Portfolio site source (site/dist is built by CI, not committed)
+!site/src/**
+!site/public/**
+!site/package.json
+!site/package-lock.json
+!site/astro.config.mjs
+!site/tsconfig.json
+
+# GitHub Actions
+!.github/**
+
+# Never track build output, dependencies, local backups
+site/node_modules/
+site/dist/
+site/.astro/
+backup/
+**/.DS_Store

@@ -1,3 +1,18 @@
+---
+title: "kabuself"
+emoji: "📈"
+order: 3
+subtitle: "AIエージェント意思決定監査システム"
+desc: "AIが自律的に株式投資できるかを検証するペーパートレード実験基盤。判断の論拠を先に記録しないと発注できないAPI制約で意思決定を可視化。"
+tags:
+  - "FastAPI"
+  - "Python"
+  - "Next.js"
+  - "React"
+  - "SQLite"
+  - "yfinance"
+---
+
 # kabuself — AIが自律的に株式投資する実験基盤
 
 > 「AIは自分で考えて株式投資ができるのか？」を、**本物のお金を一切使わずに**検証する実験システム。

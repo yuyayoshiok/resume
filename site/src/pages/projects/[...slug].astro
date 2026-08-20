@@ -1,0 +1,60 @@
+---
+import { getCollection, render } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const projects = await getCollection("projects");
+  return projects.map((project) => ({
+    params: { slug: project.id },
+    props: { project },
+  }));
+}
+
+interface Props {
+  project: CollectionEntry<"projects">;
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+
+<Layout
+  title={`${project.data.title} — Y.Yuya`}
+  description={project.data.desc}
+>
+  <nav class="project-nav">
+    <a href={`${base}/`} class="project-nav__back">
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path d="M19 12H5M12 19l-7-7 7-7"></path>
+      </svg>
+      Back
+    </a>
+  </nav>
+
+  <article class="project-page">
+    <header class="project-page__header fade-in">
+      <h1 class="project-page__title">{project.data.title}</h1>
+      <p class="project-page__subtitle">{project.data.subtitle}</p>
+      <div class="project-page__tags">
+        {project.data.tags.map((tag) => <span class="modal__tag">{tag}</span>)}
+      </div>
+    </header>
+
+    <div class="project-page__body fade-in">
+      <Content />
+    </div>
+  </article>
+
+  <footer class="footer fade-in">
+    <p>&copy; 2026 Y.Yuya</p>
+  </footer>
+</Layout>

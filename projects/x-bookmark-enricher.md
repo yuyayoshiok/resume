@@ -1,3 +1,17 @@
+---
+title: "x-bookmark-enricher"
+emoji: "🔖"
+order: 8
+subtitle: "ブックマーク自動整理システム"
+desc: "X(Twitter)のブックマークをAIで要約・タグ付け・スコアリングし、Obsidian Vaultにインポート。あとで読むを知識ベースに変換。"
+tags:
+  - "TypeScript"
+  - "Groq"
+  - "Gemini"
+  - "Playwright"
+  - "Obsidian"
+---
+
 # x-bookmark-enricher — Xのブックマークを「使える知識」に変えてメモ帳へ取り込む
 
 > X（旧Twitter）でブックマークした投稿を自動で取得し、本文やリンク先記事を読み込んでAIが要約・タグ付け。その結果を自分のメモ帳（Obsidian Vault）に整理して保存するツール。「あとで読む」で埋もれがちなブックマークを、検索・活用できる知識ベースに変える。

@@ -1,3 +1,17 @@
+---
+title: "Gorisan（ゴリさん）"
+emoji: "💪"
+order: 4
+subtitle: "関西弁AIパーソナルトレーナー LINE Bot"
+desc: "熱血・関西弁キャラのAIトレーナーが、食事写真の解析から運動記録、応援メッセージまで担当。友人と2人で使い、お互いの記録が相手への応援通知になる設計。"
+tags:
+  - "Go"
+  - "Gemini"
+  - "Cloud Run"
+  - "LINE Messaging API"
+  - "Firestore"
+---
+
 # Gorisan（ゴリさん）— 関西弁AIパーソナルトレーナー LINE Bot
 
 > 「筋肉は裏切らへん！💪」— 熱血・関西弁キャラのAIトレーナーが、食事写真の解析から運動記録、応援メッセージまで担当し、ダイエットの「継続」を支える LINE Bot。

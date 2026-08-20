@@ -1,3 +1,17 @@
+---
+title: "youtube-importer"
+emoji: "📺"
+order: 7
+subtitle: "YouTube自動要約パイプライン"
+desc: "登録チャンネルの新着動画を自動検知し、文字起こし＆AI要約してObsidian Vaultに保存。200本以上処理済み。"
+tags:
+  - "Python"
+  - "Groq"
+  - "Gemini"
+  - "GitHub Actions"
+  - "Obsidian"
+---
+
 # youtube-importer — YouTube動画を自動で要約してメモ帳に取り込む
 
 > 見たいYouTubeチャンネルを登録しておくと、新着動画を自動で検知し、内容を文字起こし＆AI要約して、自分のメモ帳（Obsidian）に「読めるノート」として保存してくれるツール。動画を「見る」前に要点が手に入る。

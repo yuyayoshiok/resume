@@ -1,3 +1,17 @@
+---
+title: "x-yuya Radio"
+emoji: "🎙️"
+order: 6
+subtitle: "全自動ポッドキャスト生成システム"
+desc: "Obsidian Vaultの思考ログを素材に、AIが台本を書き、音声合成エンジンが2人の話者で読み上げる全自動ポッドキャスト生成システム。"
+tags:
+  - "Python"
+  - "Codex"
+  - "AivisSpeech"
+  - "Cloudflare R2"
+  - "GitHub Actions"
+---
+
 # x-yuya（ラジオ機能）— AIパーソナリティ2人のポッドキャスト自動生成
 
 > 自分のメモ帳（Obsidian）に溜めた思考ログや日記を素材に、AIがラジオ番組の台本を書き、2人のAI話者が掛け合いで読み上げて、毎日自動で配信する——**人の手を一切借りずに、毎日ポッドキャストが1本できあがる**システム。

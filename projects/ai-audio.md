@@ -1,3 +1,17 @@
+---
+title: "ai-audio"
+emoji: "🎤"
+order: 5
+subtitle: "音声入力デスクトップツール"
+desc: "ホットキーで録音→AI文字起こし→AI整形→クリップボードへ。吃音フレンドリーな設計で、長い沈黙でも録音が止まらないデスクトップアプリ。"
+tags:
+  - "Python"
+  - "Groq Whisper"
+  - "Gemini"
+  - "customtkinter"
+  - "pynput"
+---
+
 # ai-audio — 音声入力 → AI整形 デスクトップツール
 
 > キーひとつ押すだけでマイク録音がはじまり、AI（Groq Whisper）が文字起こし、別のAI（Gemini）が読みやすく整形して、あとは貼り付けるだけの状態でクリップボードへ——「話すだけで文章の下書きができる」個人向けデスクトップアプリ。
