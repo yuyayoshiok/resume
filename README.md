@@ -1,84 +1,83 @@
 # Y.Yuya
 
-**LLM統合・業務自動化が得意なPythonバックエンドエンジニア**
+**AIエージェントを開発の相棒に、一人でプロダクトを作り切るエンジニア**
 
-業務自動化・生成AI活用を軸に3年以上の開発経験。
-BPO企業で月20万件のVoCデータをAzure OpenAIで自動分析する仕組みを構築し、約200人月かかっていた作業を1-2名運用まで圧縮。
+業務自動化・生成AI活用を軸に約4年の開発経験。
+直近ではBPO企業で月20万件のVoCデータをAzure OpenAIで自動分析する仕組みを構築し、約200人月かかっていた作業を1-2名運用まで圧縮。
 
-個人開発では複数のLLM（Codex / Gemini / Groq）を役割分担させた自律型エージェント基盤を設計・本番運用中です。
+2023年からChatGPTを開発に取り入れ、現在は Claude Code / Cursor / Codex を役割ごとに使い分けています。定型的な実装はAIエージェントに任せ、自分は「何を作るか」の設計判断と、出てきたコードの品質担保に集中する。この進め方を実務でも個人開発でも徹底しています。
 
 > ポートフォリオサイト: [yuyayoshiok.github.io/resume](https://yuyayoshiok.github.io/resume/)
 
-「自分が直面する課題をテクノロジーで解決する」を原動力に、複数のLLMを役割分担させた自律型エージェント基盤の設計から、AWS/GCP/AzureのAI連携、Terraformによるインフラのコード管理、フロントエンド（React/Next.js）までを一人で一貫して構築しています。
+「自分が直面する課題をテクノロジーで解決する」を原動力に、フロントエンド（React / TypeScript）からサーバーレス関数、クラウドインフラ（AWS / GCP / Azure / Cloudflare）、Terraformによるコード管理まで、領域を分けずに一人で一貫して構築しています。
 
 「作って終わり」にせず、開発したシステムを日々実稼働させて継続的にアップデートし続ける自走力が強みです。
 
 
 ---
 
-## 基本情報
-
-| | |
-|---|---|
-| 居住地 | 島根県松江市 |
-| GitHub | [github.com/yuyayoshiok](https://github.com/yuyayoshiok) |
-
----
-
 ## 強みの3本柱
 
-### 1. AIエージェント運用設計
-「作って終わり」ではなく、**定時で自律稼働して人間がレビューする仕組み**まで設計・運用できます。
+### 1. AI駆動開発の実践
+AIエージェントを「補助ツール」ではなく開発の中核に据え、**開発環境そのものを設計**しています。
 
-- 複数LLMの役割分担オーケストレーション（Codex / Gemini / Groq)
-- GitHub Actions による定時エージェント稼働
+- Claude Code / Cursor / Codex を役割ごとに使い分け（2023年〜実務利用）
+- 依頼内容に応じて処理を振り分ける Claude Code Skill 群の設計・運用
+- 複数のMCPサーバーを接続し、複数データソースをAIから横断参照できる環境を構築
 
-### 2. データ処理・集計の自動化
+### 2. 一人で作り切るフルスタック実装力
+UIからバックエンド、デプロイまで領域を分けずに担当し、動くものを届けます。
+
+- フロントエンド: React / TypeScript / Vite（ダッシュボード実装）
+- バックエンド: Python（FastAPI / Flask）・Go・Node.js
+- 業務委託先ではWebアプリケーションを要件ヒアリングから設計・実装・運用まで一人称で担当し、1〜3か月単位で納品
+- チーム開発では Git / GitHub を用い、コードレビューを受けながら実装を担当
+
+### 3. データ処理・自動化とクラウド運用
 大量データを正確かつ高速に処理する仕組みを、制約のある環境でも実装できます。
-- BPO企業でのVoC分析: 月20万件の顧客データをAzure OpenAIで自動集計・分析（8-9台の並列分散処理）
 
-### 3. クラウド本番運用
-個人プロダクトをGCPサーバーレスで本番運用。
-- AWS: Lambda / S3 / CloudWatch / EventBridge
-- Azure: Azure OpenAI（VoC分析基盤で実務利用）
-- GCP: Cloud Run / Cloud Functions / Cloud Scheduler / Firestore / GCS / BigQuery
-- Cloudflare: Workers / R2 / D1 / AI Gateway
-- IaC: Terraform
-- CI/CD: GitHub Actions
-- コンテナ: Docker(orbstack)
-- バックエンド: Python（FastAPI / Flask）・Go
-- フロントエンド: Next.js / React / TypeScript
+- BPO企業でのVoC分析: 月20万件の顧客データをAzure OpenAIで自動集計・分析（8-9台の並列分散処理）
+- 営業確度予測PoC: 数万件規模の商談データを前処理し、LightGBMでモデル構築・評価
+- 個人プロダクトをサーバーレス構成で継続運用
+  - GCP: Cloud Run / Cloud Functions / Cloud Scheduler / Firestore / GCS / BigQuery
+  - Cloudflare: Workers / R2 / D1 / AI Gateway
+  - AWS: Lambda / S3 / CloudWatch / EventBridge
+  - Azure: Azure OpenAI
+- Terraform によるインフラのコード管理、GitHub Actions での CI/CD、Docker（OrbStack）
 
 ---
 
 ## 代表プロジェクト
 
+### [Kanban](projects/kanban.md) — ダッシュボード / カンバンWebアプリ
+> タスク管理と情報収集を1画面に集約した、自分専用のプロダクト（TypeScript 2万行以上）
+
+- Google Tasks API との双方向同期、ドラッグ&ドロップによるカンバンUI、GitHub Issues 連携を実装
+- **複数のLLM（Gemini / Grok / GLM）へ同一の問いを並列で投げ、回答の良い部分をマージして最適解を作る「ディベートモード」** のAIチャットを実装
+- フロントエンドからサーバーレス関数、デプロイまで一人で担当し、日常的に使い続けながら改善中
+- **技術**: React / TypeScript / Vite / Cloudflare
+
+---
+
 ### [MyDigitalButler](projects/my-digital-butler.md) — 個人AIアシスタント基盤
 > GCP上に構築した、自分専用のAIプラットフォーム
 
 - Slackをインターフェースに、日次レビュー・RSS要約・ヘルスデータ監視・コスト集計などを自動化
-- Python + Go のマイクロサービス十数個を Cloud Run / Cloud Scheduler で束ねて定時自律稼働（現在CloudFlareに移管中）
-- Terraform でインフラをコード管理。
-- **技術**: GCP / Terraform / Python / Go / Slack Bot / Gemini / Groq / Firestore / Docker / Cloudflare
+- Python + Go のマイクロサービス十数個を Cloudflare で束ねて定時稼働
+- 1万件超の個人ドキュメント資産を対象に、タグ×キーワード検索で関連文書を収集しLLMのコンテキストへ渡すRAGを実装
+- Terraform でインフラをコード管理
+- **技術**: Cloudflare / Terraform / Python / Go / Slack Bot / Gemini / Groq
 
 ---
 
-### [kabuself](projects/kabuself.md) — AIエージェント意思決定監査システム
-> Claude Codeが自律的にペーパートレードする実験システム
+### Claude Code Skill群設計 — AI開発環境そのものの設計
+> 依頼内容に応じて適切なSkillへ自動振り分けする、自分専用の開発・生活基盤
 
-- AIの売買判断を**DB強制記録**することで、意思決定をブラックボックスにしない設計
-- FastAPI バックエンド + Next.js ダッシュボードで判断ログを可視化
-- launchd で自動稼働、decision_today.json を毎日更新して継続稼働中
-- **技術**: Python / SQLite / Next.js / yfinance / Claude Code
+- 健康データ分析・リサーチ・コンテンツ制作など、用途別のSkillを継続的に開発・改善
+- 複数のMCPサーバーを選定・接続し、ノート・健康データなど複数ソースをAIから横断参照
+- 「AIをどう働かせれば人間の生産性が上がるか」を日々検証し続けている
+- **技術**: Claude Code
 
----
-
-### [ai-audio](projects/ai-audio.md) — 音声入力デスクトップツール
-> ホットキー押下で録音→Whisper文字起こし→Gemini整形→クリップボードに流す
-
-- 吃音配慮のプロンプト設計。
-- **技術**: Python / Groq Whisper / Gemini
-- 参考：https://pody.jp/player/ngpcDWPy6otqtyr7XYmx/gdfr60bU6m6Jtpq2jyQv
 ---
 
 ## その他のプロジェクト（抜粋）
@@ -87,7 +86,7 @@ BPO企業で月20万件のVoCデータをAzure OpenAIで自動分析する仕組
 |---|---|---|
 | [Gorisan（ゴリさん）](projects/gorisan.md) | 関西弁AIトレーナーLINE Bot。食事写真解析・歩数自動集計・相互応援で運動継続を支援 | Go / Gemini / Cloud Run / LINE |
 | [x-yuya Radio](projects/x-yuya-radio.md) | Codex/AivisSpeechが毎朝ラジオ音声を自動生成 | Codex / AivisSpeech / Cloudflare |
-| [Kanban](projects/kanban.md) | Google Tasks連携・LLMチャット搭載の自分専用ダッシュボード | React / TypeScript / Cloudflare |
+| [ai-audio](projects/ai-audio.md) | ホットキー録音→Whisper文字起こし→Gemini整形→クリップボードへ | Python / Groq Whisper / Gemini |
 | [youtube-importer](projects/youtube-importer.md) | YouTubeを監視し新着を文字起こし→要約→Obsidianへ自動保存 | Python / GitHub Actions / Groq Whisper |
 | [x-bookmark-enricher](projects/x-bookmark-enricher.md) | XブックマークをAIで要約・タグ付けしObsidian Vaultへインポート | TypeScript / Groq / Playwright |
 
@@ -97,24 +96,27 @@ BPO企業で月20万件のVoCデータをAzure OpenAIで自動分析する仕組
 
 | カテゴリ | 技術 |
 |---|---|
-| **言語** | Python / Go / TypeScript |
-| **AI / LLM** | Claude / Gemini / Groq / Whisper |
+| **言語** | Python / TypeScript / JavaScript / Go / PHP / Google Apps Script / VBA |
+| **AI / LLM** | Azure OpenAI Service / OpenAI API / Claude / Gemini / Groq / Whisper / RAG / MCP |
+| **AI駆動開発** | Claude Code / Cursor / Codex / ChatGPT / Github Copilot |
+| **機械学習** | LightGBM |
 | **クラウド** | AWS / GCP / Azure / Cloudflare |
 | **IaC / CI** | Terraform / GitHub Actions / Docker |
 | **バックエンド** | FastAPI / Flask / Node.js |
-| **フロントエンド** | Next.js / React / TypeScript |
+| **フロントエンド** | React / TypeScript / Vite / HTML / CSS |
 | **DB** | SQLite / Firestore / BigQuery |
-| **資格** | AWS認定クラウドプラクティショナー（2025年）/ JDLA G検定（2025年）|
+| **資格** | AWS認定クラウドプラクティショナー（2024年）/ JDLA G検定（2025年）|
 
 ### 経験年数
 | 領域 | 年数 |
 |---|---|
-| システム開発全般 | 3年以上 |
-| 業務自動化・社内DX | 3年以上 |
-| 生成AI / LLM活用 | 3年程度 |
-| Python | 2年以上 |
+| システム開発全般 | 4年以上 |
+| 業務自動化・社内DX | 4年以上 |
+| AI駆動開発（Claude Code / Cursor 等） | 3年（2023年〜） |
+| 生成AI / LLM活用 | 3年以上 |
 | GAS / VBA | 3年以上 |
-| GCP / Cloudflare | 1〜2年 |
+| Python | 2年以上 |
+| GCP / Cloudflare | 2年程度 |
 | TypeScript / React | 1年以上 |
 
 ※ 実務では業務自動化・生成AI活用、個人開発ではAIエージェント基盤・クラウド運用を中心に継続しています。
@@ -135,6 +137,7 @@ BPO企業での短時間勤務と並行して、個人事業主（屋号：J-AI�
 | ツール名 | 技術 | 概要・成果 |
 |---|---|---|
 | VoC分析ツール | VBA + Azure OpenAI | 月20万件の顧客の声を生成AIで自動集計・分析。約200人月→1-2名運用に圧縮、8-9台の並列分散処理 |
+| 営業確度予測ツール（PoC） | Python + LightGBM | 数万件規模の商談データを前処理（欠損値処理・個人情報マスキング）し、LightGBMで受注確度モデルを構築。学習/検証データを分割しAUC等で精度確認。予測と担当者の主観確度のズレから「隠れ案件」候補を抽出 |
 | 在庫管理検索ツール | Power Automate | 検索・参照フローを自動化。手作業の検索時間を大幅短縮 |
 | シフト表自動作成ツール | GAS | スタッフの希望条件から自動生成。シフト作成時間を月2時間→10分に短縮 |
 | 工数管理チェックツール | GAS | 作業ログの入力漏れ・異常値を自動検出。検出率95%以上、チェック時間を1/5に削減 |
@@ -151,7 +154,7 @@ BPO企業での短時間勤務と並行して、個人事業主（屋号：J-AI�
 | 12タイプ別資質診断 | GAS | 生年月日から運命数を算出し12タイプ別の性格診断を表示するWebアプリ。外部サイトへのiframe埋め込みに対応 |
 | テキスト差分検出ツール | Python | ドキュメントの変更箇所を自動抽出。人手で数時間かかっていたチェック業務を数分に短縮 |
 | 社内申請ツール | Python (Flask) | 申請→承認フローを可視化し、Chatwork連携で関係者へ即時通知。承認プロセスの所要時間を約50%短縮 |
-| ECサイト改修 | PHP | 既存ECサイトの機能改修・保守対応 |
+| ECサイト改修 | PHP / HTML / CSS / JavaScript | 既存ECサイトの機能改修・保守対応。**Git/GitHubを用いた複数人体制のチーム開発**に参加し、フロントエンドを含む画面周りの実装を担当。他エンジニアによるコードレビューを受けながら開発 |
 
 ### IT企業（派遣） 2022年3月〜2022年12月
 **一般事務・業務処理**
@@ -169,15 +172,25 @@ BPO企業での短時間勤務と並行して、個人事業主（屋号：J-AI�
 
 ---
 
+## 技術発信
+
+AI駆動開発・生成AI活用をテーマに、note / Qiita で記事を継続的に公開しています。
+
+- [【個人開発】GCP × Slack × AI × Obsidianで作る「第二の脳」を作った話](https://qiita.com/yuyayoshiok/items/f3cba038550043f7f2ae)（Qiita）
+- [AIをひとつに絞れなかった僕が4つ同時に動かしたら最強の開発チームが出来た話](https://note.com/yuyaainocode/n/n91870c563a14)（note）
+- note: [note.com/yuyaainocode](https://note.com/yuyaainocode)
+
+---
+
 ## 自己PR
 
 **「自分が困るから作る」が原動力**
 
-吃音があり、口頭コミュニケーションよりもテキストで力を発揮するタイプです。
+吃音があり、口頭よりもテキストで力を発揮するタイプです。書いて伝えることを早くから鍛えてきたため、非同期・テキスト中心のコミュニケーションを得意としています。
 
 この特性がデータ入力→VBA自動化→AI活用というキャリアの一貫した方向性を生みました。
 
-電話対応が苦手な分、正確さとスピードで誰よりも貢献しようとする中で、「この作業、自動化できるのでは？」という視点が芽生え、独学でプログラミングを習得。
+正確さとスピードで誰よりも貢献しようとする中で、「この作業、自動化できるのでは？」という視点が芽生え、独学でプログラミングを習得。
 
 「自分が楽になるために作る」という動機は今も変わらず、その延長線上に個人プロダクト（AIアシスタント / 株式分析システム / 音声入力ツール）が生まれています。
 
@@ -185,15 +198,17 @@ BPO企業での短時間勤務と並行して、個人事業主（屋号：J-AI�
 
 たとえば、自作のAIアシスタントは、日々の出来事をSlack経由で整理してObsidianへ自動蓄積する「ジャーナリングの仕組み」として完全に生活の一部になっています。
 
+この「自分が困るから作る」感覚は、他人のために作るときにも効いています。業務ツールの開発では、まず現場担当者に直接話を聞き、「どこで手が止まっているか」を自分ごとに変換してから設計に入ります。非エンジニアが毎日使うものだからこそ、動くだけでなく、迷わず使えて、壊れても復旧できる形に落とし込む。シフト表作成を月2時間から10分に、承認プロセスを約50%短縮といった成果は、この進め方から生まれています。
+
 **AIを「使う」ではなく「運用設計する」**
 
 生成AI登場時にいち早く業務活用を探求し、ChatGPT・Gemini・Claude Code・Groqなど複数のLLMを使い分けてきました。
 
-現在は「作って終わり」ではなく、**複数のAIエージェントを役割分担させ、定時で自律稼働し、人間がレビューする仕組み**を設計・運用しています。タスクの複雑さや判断の重要度に応じて、コストと精度のバランスを見ながら使用するLLMを切り替えるルーティング設計を採用し、コストを最適化しています。
+現在は「作って終わり」ではなく、**複数のAIエージェントを役割分担させ、定時で稼働し、人間がレビューする仕組み**を設計・運用しています。タスクの複雑さや判断の重要度に応じて、コストと精度のバランスを見ながら使用するLLMを切り替えるルーティング設計を採用し、コストを最適化しています。
 
 エージェントを安定稼働させるため、エラー検知時にAI（Codex）が自動修復を試みる自己修復ループを実装。また、AIの意思決定プロセスをDB・ログに強制記録し、実行結果を人間が後からレビューできる仕組みを組み込むことで、AIの判断をブラックボックス化させない設計を徹底しています。
 
-単なるAPIラッパーではない、実用的なエージェント運用基盤を一人で設計・本番運用しています。
+単なるAPIラッパーではない、実用的なエージェント運用基盤を一人で設計・継続運用しています。
 
 **制約を突破する実装力と、コストをシビアに見据える自走力**
 
@@ -214,5 +229,5 @@ BPO企業での短時間勤務と並行して、個人事業主（屋号：J-AI�
 | 雇用形態 | 正社員 |
 | 働き方 | フルリモート |
 | 勤務地 | 島根県松江市またはフルリモート |
-| 得意領域 | AI/LLMエージェント運用設計 / Pythonバックエンド開発 |
-| 興味ある案件 | LLMエージェント開発 / データパイプライン構築 / Webアプリケーション開発 |
+| 得意領域 | AI駆動開発 / AI・LLMエージェント運用設計 / Webアプリケーション開発 |
+| 興味ある案件 | AIを活用したプロダクト開発 / LLMエージェント開発 / Webアプリケーション開発 |
