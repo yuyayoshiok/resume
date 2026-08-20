@@ -38,6 +38,10 @@ tags:
 出力: 番組リストへ追加し、Kanbanのラジオプレイヤーで再生
 ```
 
+![ラジオプレイヤー](https://raw.githubusercontent.com/yuyayoshiok/resume/main/screenshots/radio-player.webp)
+
+*生成したエピソードはKanban内のプレイヤーで再生できる。再生速度の切り替えにも対応*
+
 ---
 
 ## 技術スタック

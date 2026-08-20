@@ -38,6 +38,14 @@ tags:
 - **GUIとCLIの両対応**: 録音・履歴・設定の3タブ画面（customtkinter）と、ターミナルから使えるCLI（typer）
 - **ライブレベルメーター**: 録音中は小さなボーダーレスウィンドウに24本の音量バーをリアルタイム表示
 
+![メインウィンドウ](https://raw.githubusercontent.com/yuyayoshiok/resume/main/screenshots/ai-audio-window.webp)
+
+*録音・履歴・設定の3タブ構成。整形結果はクリップボードへ自動コピーされ、生の文字起こしも確認できる*
+
+![録音中のレベルメーター](https://raw.githubusercontent.com/yuyayoshiok/resume/main/screenshots/ai-audio-meter.webp)
+
+*録音中は小さなウィンドウに音量バーを表示する。無音が続いても録音は止まらない*
+
 ---
 
 ## 技術スタック

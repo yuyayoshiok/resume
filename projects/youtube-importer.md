@@ -31,6 +31,10 @@ tags:
 
 いまは自己啓発系の9チャンネルを監視していて、これまでに200本以上を処理しました。動画を実際に見なくても、要点やキーワード、印象に残った発言がノートに貯まっていきます。
 
+![YouTube新着検知の通知](https://raw.githubusercontent.com/yuyayoshiok/resume/main/screenshots/butler-youtube.webp)
+
+*登録チャンネルの新着を検知するとSlackへ通知し、そのまま文字起こしと要約に進む*
+
 ---
 
 ## 主な機能

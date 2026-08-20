@@ -48,6 +48,10 @@ tags:
 | RSS処理 | 8:00 / 12:30 / 18:30 | 技術ブログを巡回して要約し、Slack と Obsidian へ |
 | 日次振り返り | 22:00 | Slackの会話ログをMarkdownの日記に変換して保存 |
 
+![RSS要約のSlack通知](https://raw.githubusercontent.com/yuyayoshiok/resume/main/screenshots/butler-rss.webp)
+
+*巡回した技術ブログをAIが要約し、重要度を10段階でスコアリングしてSlackへ通知する*
+
 ### AIによる自律処理
 
 - **ナレッジグラフ生成**: Obsidianのノートを分析してタグとサマリーを新たに自動付与

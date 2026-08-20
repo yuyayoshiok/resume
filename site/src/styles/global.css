@@ -273,3 +273,31 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+/* ------------------------------------------------------------------ *
+ * Screenshots inside project write-ups
+ * ------------------------------------------------------------------ */
+
+.project-page__body img {
+  display: block;
+  margin: 2rem auto 0.75rem;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 2px 14px rgba(2, 6, 23, 0.06);
+}
+
+/* A paragraph holding only an image should not add its own spacing. */
+.project-page__body p:has(> img:only-child) {
+  margin: 0;
+}
+
+/* A paragraph that is only emphasis directly after an image is a caption. */
+.project-page__body p:has(> img:only-child) + p > em:only-child {
+  display: block;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  font-style: normal;
+  color: var(--gray-500);
+  line-height: 1.6;
+}

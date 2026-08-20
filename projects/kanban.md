@@ -29,6 +29,14 @@ tags:
 
 ひとつは Google Tasks と双方向に同期すること。もうひとつは、複数のAIに同じ質問を投げて回答を比べられる「ディベートモード」を持っていることです。
 
+![ホーム画面](https://raw.githubusercontent.com/yuyayoshiok/resume/main/screenshots/kanban-home.webp)
+
+*ホーム画面。時計、検索、今日の名言、よく使うリンクをまとめている*
+
+![カンバンボード](https://raw.githubusercontent.com/yuyayoshiok/resume/main/screenshots/kanban-board.webp)
+
+*タスク管理画面。期限切れ・今日・明日・7日以内・完了済みの列で管理し、ドラッグで移動できる*
+
 ---
 
 ## 主な機能

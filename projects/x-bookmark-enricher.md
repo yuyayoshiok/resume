@@ -32,6 +32,14 @@ tags:
 3. 保存    Obsidianに整理した形で書き込む
 ```
 
+![実行ログ](https://raw.githubusercontent.com/yuyayoshiok/resume/main/screenshots/enricher-cli.webp)
+
+*3252件のブックマークを管理し、未処理のものだけを差分で処理する*
+
+![生成されたノート](https://raw.githubusercontent.com/yuyayoshiok/resume/main/screenshots/enricher-note.webp)
+
+*生成されるノート。frontmatterにカテゴリ、タグ、記事ネタ度が入り、本文に要約が続く*
+
 ---
 
 ## 主な機能

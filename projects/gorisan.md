@@ -48,6 +48,10 @@ tags:
 | 相談への回答 | 筋トレ方法などの相談に、Google検索で裏付けを取りながら回答 |
 | ゴールの自動切替 | 目標体重の達成を検知するとダイエットモードから筋トレモードへ移行し、メニューも差し替え |
 
+![Apple Healthからの自動記録](https://raw.githubusercontent.com/yuyayoshiok/resume/main/screenshots/gorisan-health.webp)
+
+*Apple Healthのデータが届くと自動で記録し、ゴリさんが関西弁で反応する*
+
 ### 自動で動く機能
 
 | 機能 | トリガー | 内容 |
@@ -58,6 +62,10 @@ tags:
 | 週次レビュー | 日曜21時 | 1週間の体重・歩数・食事を総括 |
 | 月次チャレンジ | 月初 / 月末 | 月ごとの目標設定と達成判定 |
 | 日記への反映 | ヘルスデータ着信時 | Apple Watch経由のデータが届いたらObsidianの日記へ転記 |
+
+![週次レビュー](https://raw.githubusercontent.com/yuyayoshiok/resume/main/screenshots/gorisan-weekly.webp)
+
+*日曜21時に届く週次レビュー。体重・歩数・筋トレを集計し、最後にひとこと添える*
 
 ### ソーシャル機能
 
