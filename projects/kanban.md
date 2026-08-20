@@ -3,7 +3,7 @@ title: "Kanban"
 icon: "board"
 order: 1
 subtitle: "ダッシュボード / カンバンWebアプリ"
-desc: "Google Tasksと同期するカンバンボードに、複数のAIへ同じ問いを投げて回答をマージする「ディベートモード」を組み合わせた自分用のダッシュボード。TypeScript 2万行のフルスタックアプリ。"
+desc: "Google Tasksと同期するカンバンボードに、複数のAIへ同じ問いを投げて回答をマージする「ディベートモード」を組み合わせた自分用のダッシュボード。"
 tags:
   - "React"
   - "TypeScript"

@@ -46,7 +46,7 @@ export const skillGroups = [
   },
   {
     title: "フロントエンド",
-    tags: ["React", "TypeScript", "Vite", "Next.js", "HTML", "CSS"],
+    tags: ["React", "TypeScript", "Vite", "HTML", "CSS"],
   },
   {
     title: "バックエンド",
