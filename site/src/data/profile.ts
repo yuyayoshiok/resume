@@ -140,10 +140,18 @@ export const articles = [
     href: "https://note.com/yuyaainocode/n/n91870c563a14",
     site: "note",
   },
+  {
+    title: "指示の質が全て。AIと一緒に考える習慣が、人への関わり方まで変えた話",
+    href: "https://note.com/yuyaainocode/n/ne73991194c0d",
+    site: "note",
+  },
 ] as const;
 
 export const aboutItems = [
-  { label: "拠点", status: "島根県松江市 / フルリモート" },
+  { label: "雇用形態", status: "正社員としてフルコミット" },
+  { label: "働き方", status: "フルリモート希望。フレックス制度のある環境だと嬉しいです" },
+  { label: "拠点", status: "島根県松江市在住。必要に応じて出社・出張は可能です" },
+  { label: "コミュニケーション", status: "テキスト中心の非同期なやりとりを得意としています" },
+  { label: "大事にしたい環境", status: "AIツールの導入に前向きで、開発プロセスそのものを改善していけるチーム" },
   { label: "資格", status: "AWS認定 クラウドプラクティショナー / JDLA G検定" },
-  { label: "興味のある領域", status: "AIを活用したプロダクト開発、LLMエージェント、Webアプリケーション開発" },
 ] as const;

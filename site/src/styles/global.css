@@ -265,3 +265,11 @@
 .about-work__item p.about-work__status {
   margin-bottom: 0;
 }
+
+/* Articles section holds only a couple of cards, so keep the grid centered
+   instead of letting it stretch across the full row. */
+.section--articles .work-grid {
+  max-width: 840px;
+  margin-left: auto;
+  margin-right: auto;
+}
