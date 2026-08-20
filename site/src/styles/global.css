@@ -250,3 +250,18 @@
 .project-card:hover .project-card__icon {
   color: var(--accent-light);
 }
+
+/* ------------------------------------------------------------------ *
+ * About section — center the grid
+ * ------------------------------------------------------------------ */
+
+.about-work {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* .about-work__status carries a 2rem bottom margin from its original use
+   as a standalone line; inside a card it just adds dead space. */
+.about-work__item p.about-work__status {
+  margin-bottom: 0;
+}
