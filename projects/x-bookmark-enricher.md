@@ -58,7 +58,7 @@ tags:
 - タグ3〜5個とカテゴリ（AI・プログラミング・ビジネスなど13分類）
 - **記事ネタ度（1〜10点）** — ブログ記事に発展させられそうかをAIが採点。高得点のものを後でまとめて記事にできます
 
-出力されるノートのサンプルはこちらです: [x-bookmark-enricher-output.md](../samples/x-bookmark-enricher-output.md)
+出力されるノートのサンプルはこちらです: [x-bookmark-enricher-output.md](https://github.com/yuyayoshiok/resume/blob/main/samples/x-bookmark-enricher-output.md)
 
 ---
 
