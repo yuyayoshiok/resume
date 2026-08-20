@@ -9,7 +9,7 @@
 
 > ポートフォリオサイト: [yuyayoshiok.github.io/resume](https://yuyayoshiok.github.io/resume/)
 
-「自分が直面する課題をテクノロジーで解決する」を原動力に、フロントエンド（React / TypeScript）からサーバーレス関数、クラウドインフラ（AWS / GCP / Azure / Cloudflare）、Terraformによるコード管理まで、領域を分けずに一人で一貫して構築しています。
+「自分が直面する課題をテクノロジーで解決する」を原動力に、フロントエンド（React / TypeScript）からサーバーレス関数、クラウドインフラ（Google Cloud / Cloudflare / Azure）、Terraformによるコード管理まで、領域を分けずに一人で一貫して構築しています。
 
 「作って終わり」にせず、開発したシステムを日々実稼働させて継続的にアップデートし続ける自走力が強みです。
 
@@ -24,25 +24,29 @@ AIエージェントを「補助ツール」ではなく開発の中核に据え
 - Claude Code / Cursor / Codex を役割ごとに使い分け（2023年〜実務利用）
 - 依頼内容に応じて処理を振り分ける Claude Code Skill 群の設計・運用
 - 複数のMCPサーバーを接続し、複数データソースをAIから横断参照できる環境を構築
+- 定型的な実装はAIに任せ、自分は設計判断とコードの品質担保に集中する進め方を徹底
 
-### 2. 一人で作り切るフルスタック実装力
-UIからバックエンド、デプロイまで領域を分けずに担当し、動くものを届けます。
+### 2. 生成AI・機械学習の業務実装
+モデルを触るだけでなく、**現場で使われ続けるシステムに落とし込む**ところまで担当します。
 
-- フロントエンド: React / TypeScript / Vite（ダッシュボード実装）
+- VoC分析: 月20万件の問い合わせを Azure OpenAI で自動分類。約200人月相当の作業を1-2名の運用体制へ
+- 営業確度予測PoC: 数万件規模の商談データを前処理し、LightGBMでモデル構築。学習/検証データを分けてAUC等で精度を確認
+- RAG構成の実装: 1万件超のドキュメントから関連文書を検索し、LLMのコンテキストへ渡す仕組みを設計・運用
+- 制約の強い環境でも動かす: 外部実行環境が使えない現場で、VBAからAPIを呼ぶ構成を考案し8-9台で並列処理
+
+### 3. 現場の課題を聞き、動くものに変える実装力
+UIからバックエンド、デプロイまで領域を分けずに担当し、要件のヒアリングから運用定着まで見届けます。
+
+- 非エンジニアの業務担当者への直接ヒアリングを起点に、要件定義から運用定着まで一貫して担当
+- フロントエンド: React / TypeScript / Vite
 - バックエンド: Python（FastAPI / Flask）・Go・Node.js
-- 業務委託先ではWebアプリケーションを要件ヒアリングから設計・実装・運用まで一人称で担当し、1〜3か月単位で納品
-- チーム開発では Git / GitHub を用い、コードレビューを受けながら実装を担当
-
-### 3. データ処理・自動化とクラウド運用
-大量データを正確かつ高速に処理する仕組みを、制約のある環境でも実装できます。
-
-- BPO企業でのVoC分析: 月20万件の顧客データをAzure OpenAIで自動集計・分析（8-9台の並列分散処理）
-- 営業確度予測PoC: 数万件規模の商談データを前処理し、LightGBMでモデル構築・評価
+- 業務委託先ではWebアプリケーションを一人称で担当し、1〜3か月単位で納品
+- チーム開発では Git / GitHub を用い、コードレビューを受けながら実装
 - 個人プロダクトをサーバーレス構成で継続運用
-  - GCP: Cloud Run / Cloud Functions / Cloud Scheduler / Firestore / GCS / BigQuery
+  - Google Cloud: Cloud Run / Cloud Functions / Cloud Scheduler / Firestore / GCS / BigQuery
   - Cloudflare: Workers / R2 / D1 / AI Gateway
-  - AWS: Lambda / S3 / CloudWatch / EventBridge
   - Azure: Azure OpenAI
+  - AWS: Lambda / S3 / EventBridge（過去に個人開発で使用。現在の主軸は Google Cloud / Cloudflare）
 - Terraform によるインフラのコード管理、GitHub Actions での CI/CD、Docker（OrbStack）
 
 ---
@@ -100,7 +104,7 @@ UIからバックエンド、デプロイまで領域を分けずに担当し、
 | **AI / LLM** | Azure OpenAI Service / OpenAI API / Claude / Gemini / Groq / Whisper / RAG / MCP |
 | **AI駆動開発** | Claude Code / Cursor / Codex / ChatGPT / Github Copilot |
 | **機械学習** | LightGBM |
-| **クラウド** | AWS / GCP / Azure / Cloudflare |
+| **クラウド** | Google Cloud / Cloudflare / Microsoft Azure ／ AWS（資格保有・過去に個人開発で使用） |
 | **IaC / CI** | Terraform / GitHub Actions / Docker |
 | **バックエンド** | FastAPI / Flask / Node.js |
 | **フロントエンド** | React / TypeScript / Vite / HTML / CSS |
@@ -117,6 +121,7 @@ UIからバックエンド、デプロイまで領域を分けずに担当し、
 | GAS / VBA | 3年以上 |
 | Python | 2年以上 |
 | GCP / Cloudflare | 2年程度 |
+| JavaScript | 2年以上 |
 | TypeScript / React | 1年以上 |
 
 ※ 実務では業務自動化・生成AI活用、個人開発ではAIエージェント基盤・クラウド運用を中心に継続しています。
