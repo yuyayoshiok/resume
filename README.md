@@ -68,6 +68,8 @@ UIからバックエンド、デプロイまで領域を分けずに担当し、
 
 > Slackから使う、自分専用のAIプラットフォーム
 
+![SlackからMyDigitalButlerに話しかけている画面](https://raw.githubusercontent.com/yuyayoshiok/resume/main/screenshots/butler-slack.webp)
+
 - 日次レビュー、RSS要約、ヘルスデータ監視、コスト集計などをSlack経由で自動化
 - Python と Go のマイクロサービス十数個を Cloudflare で束ねて定時稼働
 - 1万件超の個人ドキュメントを対象に、タグとキーワードで関連文書を集めてLLMへ渡すRAGを実装
