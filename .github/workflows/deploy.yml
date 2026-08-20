@@ -27,7 +27,7 @@ jobs:
       - name: Install & Build
         working-directory: site
         run: |
-          npm ci
+          npm install --no-audit --no-fund
           npm run build
 
       - uses: actions/upload-pages-artifact@v3

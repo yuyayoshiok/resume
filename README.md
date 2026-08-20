@@ -178,7 +178,6 @@ AI駆動開発・生成AI活用をテーマに、note / Qiita で記事を継続
 
 - [【個人開発】GCP × Slack × AI × Obsidianで作る「第二の脳」を作った話](https://qiita.com/yuyayoshiok/items/f3cba038550043f7f2ae)（Qiita）
 - [AIをひとつに絞れなかった僕が4つ同時に動かしたら最強の開発チームが出来た話](https://note.com/yuyaainocode/n/n91870c563a14)（note）
-- note: [note.com/yuyaainocode](https://note.com/yuyaainocode)
 
 ---
 
