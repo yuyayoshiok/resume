@@ -154,7 +154,7 @@ export const articles = [
 
 export const aboutItems = [
   { label: "雇用形態", status: "正社員" },
-  { label: "働き方", status: "フルリモート・フレックス制度のある環境だと嬉しいです" },
+  // { label: "働き方", status: "フルリモート・フレックス制度のある環境だと嬉しいです" },
   { label: "拠点", status: "島根県松江市" },
   { label: "大事にしたい環境", status: "AIツールの導入に前向きで、開発プロセスそのものを改善していけるチーム" },
   { label: "資格", status: "AWS認定 クラウドプラクティショナー / JDLA G検定" },
