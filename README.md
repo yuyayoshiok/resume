@@ -64,6 +64,20 @@ UIからバックエンド、デプロイまで領域を分けずに担当し、
 
 ---
 
+### [AIバーチャルオフィス](projects/ai-office.md) — AI社員が部署として働く司令室（開発中）
+
+> 仕事はAI社員に任せて、外部への公開・送信・マージ・課金は必ず自分が承認する、エージェント基盤
+
+![3Dオフィスの全景](https://raw.githubusercontent.com/yuyayoshiok/resume/main/screenshots/ai-office-overview.webp)
+
+- 秘書部・編集部・開発部などをAIエージェントとして動かし、稼働状況を3Dのオフィスで確認。依頼は社内チャットから `@部署名` で行う
+- 提案・計画・回答待ち・PR確認を「あなたの判断待ち」にまとめ、人間が決めてから次の工程に進む設計
+- 外から届いた文章は命令にしない、部署ごとの1日の実行回数の上限、夜間は自動で動かさない、手元PCが止まったら Codex cloud へ切り替える、といった止め方を設計
+- Cloudflare の Durable Object（hub）と、手元PCから外向きの WebSocket で繋ぐ runner で構成
+- **技術**: React / TypeScript / Vite / Cloudflare Workers / Durable Objects / WebSocket / Codex
+
+---
+
 ### [MyDigitalButler](projects/my-digital-butler.md) — 個人AIアシスタント基盤
 
 > Slackから使う、自分専用のAIプラットフォーム
