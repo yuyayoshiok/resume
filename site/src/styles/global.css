@@ -20,7 +20,7 @@ section[id], main[id] { scroll-margin-top:32px; }
 .hero { padding-top:64px; }
 .hero__heading { display:flex; justify-content:space-between; gap:48px; align-items:flex-end; margin-bottom:40px; }
 .hero h1 { font-size:clamp(64px,8vw,112px); font-weight:500; line-height:1.04; letter-spacing:-.065em; margin-top:20px; }
-.hero h1 span { display:block; font-family:Georgia,"Times New Roman",serif; font-style:italic; font-weight:400; letter-spacing:-.05em; }
+.hero h1 span { display:block; }
 .hero__intro { max-width:360px; padding-bottom:8px; font-size:14px; }
 .text-link { display:inline-flex; gap:40px; align-items:center; border-bottom:1px solid var(--gray-300); padding-bottom:8px; margin-top:28px; font-size:12px; }
 .hero__photo img { width:100%; aspect-ratio:2.25; object-fit:cover; object-position:50% 55%; }
